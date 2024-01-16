@@ -82,9 +82,74 @@ echo __FILE__;
 */
 
 //Variables Variables
-
+/*
 $foo = 'bar';
 
 $$foo = 'baz'; //muda o nome da variavel para bar
 
 echo "$foo, ${$foo}";
+*/
+
+/*
+Tipos de escalares
+bool
+int 
+float
+string
+
+$completed =  true;
+
+$score = 75;
+
+$price = 0.99;
+
+$greeting = 'Hello Leonardo';
+
+echo $completed . '<br/>';
+echo $score . '<br/>';
+echo $price . '<br/>';
+echo $greeting . '<br/>';
+echo gettype($price) . '<br/>';
+var_dump($greeting);
+'<br/>';
+*/
+
+/* Compound Types
+Array
+Obeject
+calable
+iterable
+
+
+$companies = [1, 2, 3, 0.5, -0.7, 'Leonardo', true];
+print_r($companies); '<br/>';
+
+
+function sum($x, $y)
+{
+    var_dump($x, $y);
+    return $x + $y;
+}
+
+//declare(strict_types=1); // Como deixar restrito o tipo da variavel
+
+function sum(int $x, int $y)
+{
+
+    return $x + $y;
+}
+echo sum('2', 3) . '<br/>';
+
+echo sum(5, '6') . '<br/>';
+
+$sum = sum('2', 3);
+
+echo $sum;
+*/
+
+//Converter o tipo
+/*
+$x = (int) '5';
+
+var_dump($x);
+*/
