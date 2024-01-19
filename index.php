@@ -151,5 +151,62 @@ echo $sum;
 /*
 $x = (int) '5';
 
+
 var_dump($x);
 */
+
+/*
+// boolean
+
+$iscomplete = true;
+$complete = TRUE;
+$out = TrUe;
+
+// integers 0 -0 = false
+// floats 0.0 -0.0 = false
+// string '' '0' = false
+// array [] = false
+// null = false
+
+echo $iscomplete;
+var_dump($iscomplete);
+var_dump(is_bool($iscomplete));
+
+if ($iscomplete) {
+    echo "Corno";
+} else {
+    echo "Não corno";
+}
+*/
+
+/*
+//Integers
+
+// Hexadecimal
+$x = 0x2A;
+
+// Octadecimal
+$y = 055;
+
+//binario
+$z = 0b11;
+
+//Coverção
+$a = (int) 5.98;
+
+// Verificar se é int
+$verifique = "Olá";
+
+
+echo $x . '<br/>';
+echo $y . '<br/>';
+echo $z . '<br/>';
+echo $a . '<br/>';
+var_dump(is_int($verifique));
+*/
+
+//Floats
+$x = 13_000.5;
+var_dump($x);
+echo $x . '<br/>';
+echo PHP_FLOAT_MAX;
