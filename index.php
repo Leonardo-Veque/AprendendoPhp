@@ -206,7 +206,86 @@ var_dump(is_int($verifique));
 */
 
 //Floats
+/*
 $x = 13_000.5;
 var_dump($x);
 echo $x . '<br/>';
 echo PHP_FLOAT_MAX;
+*/
+
+// Arrays
+/*
+$linguagens =['php','java','python'];
+
+// ou
+
+$arrayName = array('php','java','python');
+
+// indices
+
+$name = 'Gio';
+
+echo $name[1] . '<br>';
+
+echo $linguagens[0] . '<br>';
+
+// Ver se existe atributos em php
+
+var_dump(isset($linguagens[3]));
+
+
+// Ver todo o array
+
+var_dump($linguagens);
+
+//print_r
+echo '<pre>';
+print_r($linguagens);
+echo '</pre>';
+
+// Ver os numeros de um array
+
+echo count($linguagens);
+
+echo '<br>';
+
+// Adicionar em um Array
+$linguagens [] = 'C++';
+
+array_push($linguagens, 'C', 'GO');
+
+
+echo '<pre>';
+print_r($linguagens);
+echo '</pre>';
+
+// Remover o ultimo elemento do array
+
+echo array_pop($linguagens);
+
+echo '<pre>';
+print_r($linguagens);
+echo '</pre>';
+
+//Remover o primeiro
+echo array_shift($linguagens);
+
+echo '<pre>';
+print_r($linguagens);
+echo '</pre>';
+
+// Remover pelo index
+
+unset($linguagens[2]);
+
+
+echo '<pre>';
+print_r($linguagens);
+echo '</pre>';
+
+// Verificar se o index existe
+
+var_dump(array_key_exist('2', $linguagens));
+
+var_dump(isset($linguagens[3]));
+*/
