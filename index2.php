@@ -38,3 +38,23 @@ for($i = strlen($string2) -1; $i >= 0; $i -- ){
 
 echo '<br>';
 echo $invertida . '<br>'; 
+
+//Crie uma função que verifique se uma palavra é um palindromo
+
+function isPalindromo ($palavra){
+    $palavraInvertida = strrev($palavra);
+
+    return strtolower($palavra) === strtolower($palavraInvertida);
+
+}
+
+
+$teste = "radar";
+
+echo '<br>';
+
+if(isPalindromo($teste)){
+    echo "$teste é um palindromo";
+}else{
+    echo "Num é um palindromo";
+}
