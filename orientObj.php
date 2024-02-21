@@ -24,5 +24,4 @@
     echo "<br>";
     echo $lv -> getTitulo();
     
-   
 ?>
