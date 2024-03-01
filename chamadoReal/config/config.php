@@ -1,3 +1,3 @@
 <?php
- define("TITULO","ChamadoReal");
-?>
+
+define("TITULO", "ChamadoReal");

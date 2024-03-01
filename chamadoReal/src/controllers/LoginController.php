@@ -1,29 +1,34 @@
 <?php
-    require_once "../chamadoReal/src/models/user.php";
 
-    class LoginController{
-        private $users;
+require_once "./src/models/User.php";
 
-    public function __construct(){
-        $this -> users = [
-            new User(1,'adm@test.com.br','1234',1 ),
-            new User(2,'user@test.com.br','1234',2),
-            new User(3,'tiagoPitangaCamisa10@gmail.com','1234',2)
-        ];
+class LoginController
+{
+  private $users;
+
+  public function __construct()
+  {
+    $this->users = [
+      new User(1, "adm@teste.com.br", "123098", 1),
+      new User(2, "tiago@teste.com.br", "123098", 1),
+      new User(3, "leonardo@teste.com.br", "123098", 2),
+      new User(4, "bruno@teste.com.br", "123098", 2),
+      new User(5, "luiz@teste.com.br", "123098", 2),
+    ];
+  }
+  public function autenticar($email, $password)
+  {
+    foreach ($this->users as $user) {
+      if ($user->email == $email && $user->password == $password) {
+        $_SESSION["autenticar"] = "SIM";
+        $_SESSION["id"] = $user->id;
+        $_SESSION["profile_id"] = $user->profile_id;
+        header("Location: ../view/home.php");
+        die();
+      }
     }
-    public function autenticar($email, $password){
-        foreach ($this->users as $user) {
-            if($user->email == $email && $user->password == $password){
-                $_SESSION['autenticacao'] = 'SIM';
-                $_SESSION['id'] = $user->id;
-                $_SESSION['profile_id'] = $user->profile_id;
-                header('Location: ../chamadoReal/src/view/home.php');
-                exit;
-            } 
-        }
-        $_SESSION['autenticacao'] = 'NAO';
-        header('Location: index.php?login=erro');
-        exit;
-    }
-    }
-?>
+    $_SESSION["autenticar"] = "NAO";
+    header("Location: index.php?login=erro");
+    exit;
+  }
+}
